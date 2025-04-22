@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "372928694462",
+    "project_id": "bloomquest-4bd8e",
+    "storage_bucket": "bloomquest-4bd8e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372928694462:android:944c2dc9f5fe869efef6ef",
+        "android_client_info": {
+          "package_name": "com.rola.bloomquest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXAfPHTcNinhFuK9l4kns5jP5NE_YAC7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
