@@ -2,8 +2,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement Settings")]
     public float moveSpeed = 5f;
+
+    [Header("Jump Settings")]
     public float jumpForce = 7f;
+
+    [Header("VFX")]
+    public ParticleSystem MagicFX;    // drag your MagicFX particle system here
 
     private Rigidbody2D rb;
     private Vector2 movement = Vector2.zero;
@@ -25,11 +31,25 @@ public class PlayerMovement : MonoBehaviour
     public void OnRightButtonDown()
     {
         movement = Vector2.right;
+        // flip & play VFX
+        if (MagicFX != null)
+        {
+            MagicFX.transform.position = transform.position;
+            MagicFX.transform.localScale = Vector3.one;    // face right
+            MagicFX.Play();
+        }
     }
 
     public void OnLeftButtonDown()
     {
         movement = Vector2.left;
+        // flip & play VFX
+        if (MagicFX != null)
+        {
+            MagicFX.transform.position = transform.position;
+            MagicFX.transform.localScale = new Vector3(-1, 1, 1);  // face left
+            MagicFX.Play();
+        }
     }
 
     public void OnButtonUp()
@@ -39,12 +59,20 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        // smoother arc
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
         if (audioSource != null)
             audioSource.Play();
 
         if (animator != null)
             animator.SetTrigger("jump");
+
+        // play jump VFX
+        if (MagicFX != null)
+        {
+            MagicFX.transform.position = transform.position;
+            MagicFX.Play();
+        }
     }
 }
