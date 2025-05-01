@@ -59,8 +59,23 @@ public class PlayerHealth : MonoBehaviour
         isInvulnerable = false;
     }
 
-    void Die()
+   void Die()
+{
+    string currentScene = SceneManager.GetActiveScene().name;
+
+    if (currentScene == "Level1")
     {
+        SceneManager.LoadScene("Level1_Replay");
+    }
+    else if (currentScene == "LevelTW0")
+    {
+        SceneManager.LoadScene("Level2_Replay");
+    }
+    else
+    {
+        // fallback if not in a known level
         SceneManager.LoadScene("HomeScreen");
     }
+}
+
 }

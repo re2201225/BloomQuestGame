@@ -1,26 +1,15 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
+// using UnityEngine;
+// using UnityEngine.SceneManagement;
 
-public class PauseManager : MonoBehaviour
-{
-    public GameObject pausePanel; // Assign your pause menu UI here
-
-    public void PauseGame()
-    {
-        Time.timeScale = 0f;
-        pausePanel.SetActive(true);
-    }
+// public class PauseManager : MonoBehaviour
+// {
+//     public void ReplayLevel()
+//     {
+//         Time.timeScale = 1f;
+//         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+//     }
 
 
-    public void ReplayLevel()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+// }
+// Debug.Log("Replay triggered!");
 
-    public void GoToMainMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenuScreen");
-    }
-}

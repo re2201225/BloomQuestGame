@@ -607,6 +607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuSceneName: MainMenuScreen
+  usernameField: {fileID: 0}
+  passwordField: {fileID: 0}
 --- !u!4 &451921354
 Transform:
   m_ObjectHideFlags: 0
@@ -635,6 +637,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuSceneName: MainScreen
+  usernameField: {fileID: 1865063434}
+  passwordField: {fileID: 1865832101}
 --- !u!1 &522909606
 GameObject:
   m_ObjectHideFlags: 0

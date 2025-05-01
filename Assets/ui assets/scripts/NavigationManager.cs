@@ -34,6 +34,21 @@ public class NavigationManager : MonoBehaviour
         SceneManager.LoadScene("HomeScreen", LoadSceneMode.Single);
     }
 
+    public void GoToLevelTwo()
+    {
+        SceneManager.LoadScene("LevelTW0", LoadSceneMode.Single);
+    }
+
+    public void GoToLevel1Replay()
+    {
+        SceneManager.LoadScene("Level1_Replay", LoadSceneMode.Single);
+    }
+
+    public void GoToLevel2Replay()
+    {
+        SceneManager.LoadScene("Level2_Replay", LoadSceneMode.Single);
+    }
+
     public void TryContinue()
     {
         if (!string.IsNullOrWhiteSpace(usernameField.text) && 
