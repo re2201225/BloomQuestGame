@@ -1,15 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public List<Image> heartIcons;    // drag your 3 UI hearts here
-    public Sprite heartFull;          // your red heart sprite
-    public Sprite heartEmpty;         // (optional) grey heart for “lost”
+    public List<Image> heartIcons;    // Drag your 3 UI hearts here
+    public Sprite heartFull;
+    public Sprite heartEmpty;
     public int maxHearts = 3;
+    public float damageCooldown = 1f; // Seconds before player can take damage again
 
-    int currentHearts;
+    private int currentHearts;
+    private bool isInvulnerable = false;
 
     void Start()
     {
@@ -27,31 +30,37 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage()
     {
-        if (currentHearts <= 0) return;
+        if (isInvulnerable || currentHearts <= 0) return;
+
         currentHearts--;
         UpdateHeartsUI();
-        // TODO: swap to “younger” animation here
+
+        // Optional animation trigger
         var anim = GetComponent<Animator>();
-        anim.Play("YoungVersion"); 
+        if (anim != null)
+        {
+            anim.Play("YoungVersion");
+        }
+
         if (currentHearts == 0)
         {
             Die();
         }
+        else
+        {
+            StartCoroutine(DamageCooldown());
+        }
     }
 
-    public void GrowUp()
+    System.Collections.IEnumerator DamageCooldown()
     {
-        if (currentHearts >= maxHearts) return;
-        currentHearts++;
-        UpdateHeartsUI();
-        // TODO: swap to “older” animation here
-        var anim = GetComponent<Animator>();
-        anim.Play("OlderVersion");
+        isInvulnerable = true;
+        yield return new WaitForSeconds(damageCooldown);
+        isInvulnerable = false;
     }
 
     void Die()
     {
-        // e.g. reload scene or show Game Over
-        UnityEngine.SceneManagement.SceneManager.LoadScene("HomeScreen");
+        SceneManager.LoadScene("HomeScreen");
     }
 }

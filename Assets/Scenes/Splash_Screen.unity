@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e591c96a4ad664af79a36a1c54418a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextSceneName: MainMenu_Screen
+  _nextSceneName: MainMenuScreen
   _displayDuration: 3
 --- !u!4 &1533881955
 Transform:

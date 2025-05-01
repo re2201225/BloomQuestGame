@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/HomeScreen.unity
     guid: 84c851438a7914237865b6cda5b5dcf5
   - enabled: 1
-    path: Assets/Scenes/MainMenu_Screen.unity
+    path: Assets/Scenes/MainMenuScreen.unity
     guid: 3b9dc30085397485782e8a4c38050112
   - enabled: 1
     path: Assets/Scenes/RegisterationScreen.unity
@@ -26,6 +26,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Splash_Screen.unity
     guid: 72d065584fc1d47f0b21fe093f91d02a
+  - enabled: 1
+    path: Assets/Scenes/MainScreen.unity
+    guid: 40205056f211643baa5edebeb0a3b806
+  - enabled: 1
+    path: Assets/Scenes/LevelComplete.unity
+    guid: 5893b4ac461bb458191cee2567ce2301
+  - enabled: 0
+    path: Assets/Scenes/Level2.unity
+    guid: d17fc108c03894df9a2359b9909cb737
+  - enabled: 1
+    path: Assets/Scenes/LevelTW0.unity
+    guid: 24d14404d8bb449c9bce8aae0dcac794
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 07cbd60c964c3466f9f1c3def0f00394, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 6f280794ec29842f2af62bf096b95d38, type: 2}

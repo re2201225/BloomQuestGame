@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;                // for the fill image
+using UnityEngine.SceneManagement;   // for loading scenes
+
 
 public class PlayerMovement : MonoBehaviour
 {

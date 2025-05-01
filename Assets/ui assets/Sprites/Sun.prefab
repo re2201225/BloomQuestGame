@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7266039022149841168}
   - component: {fileID: 4874115237576169453}
   - component: {fileID: 6320777363534087378}
-  - component: {fileID: 1165628162345086452}
+  - component: {fileID: 5734324148668232348}
+  - component: {fileID: 6237497347875064309}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.0971, y: 5.8021, z: 0}
-  m_LocalScale: {x: 0.6309959, y: 0.5919796, z: 1}
+  m_LocalScale: {x: 0.48839083, y: 0.44001848, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -121,7 +122,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.8999999
---- !u!114 &1165628162345086452
+--- !u!95 &5734324148668232348
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7326855248952851601}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 90208dd1befba4a9480c3b3f7e42476f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6237497347875064309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,3 +155,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea419beae4f64be09343b2d3fc002b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worth: 10
